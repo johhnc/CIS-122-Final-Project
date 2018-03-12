@@ -19,7 +19,6 @@ def getQuestionNumber(introMessage):
 # Returns: string
 def correctMessage(userGuess, questionAnswer):
     print("Congratulations! You entered", userGuess, "and the correct answer is", questionAnswer + "!\n")
-
 # Create a method that accepts the word the
 # user guessed, as well as the correct answer
 # and compares the two as lowercase strings.
@@ -31,7 +30,6 @@ def isCorrect(userGuess, questionAnswer):
     if userGuess.lower() == questionAnswer.lower():
         return True
     return False
-
 # Create a method that accepts a string as a message
 # and asks the user a question with that message (input).
 # Then return the user's response as the return value 
@@ -62,7 +60,6 @@ def main():
                        3: {"football": "This popular sport is played with helmets and pads"},
                        4: {"hawaii": "This state is a collection of islands"},
                        5: {"moon": "This satellite helps control the tides"}}
-
     # Create a string variable that holds the following message:
     # "Enter as question number from 1 to 5, and you will play that clue. Enter -1 to quit "
     introMessage = "Enter as question number from 1 to 5, and you will play that clue and answer the question" \
@@ -99,11 +96,9 @@ def main():
         # Set a variable that creates a string message showing the clue
         # and ends with "What is it?"
         questionMessage = list(cluesDictionary[questionNumber].values())[0] + ". What is it?"
-
         # Set a variable that creates a string message showing the answer
         # in lower case
         questionAnswer = list(cluesDictionary[questionNumber].keys())[0].lower()
-
         # Tell the user the clue, and ask them for the correct answer
         # Be sure to use the tryAnswer method for this, and to pass
         # in the right argument (the variable questionMessage)
@@ -122,10 +117,8 @@ def main():
         if isCorrect(userGuess, questionAnswer):
             print(correctMessage(userGuess, questionAnswer))
             continue
-
         else:
             print("that was incorrect!")
-
             # Create a counter variable to know the current
             # position you are at in the answer word
             index = 0
@@ -148,7 +141,6 @@ def main():
                     if isCorrect(userGuess, questionAnswer):
                         print(correctMessage(userGuess, questionAnswer))
                         break
-
                 # If this is the last letter, tell them so,
                 # and what the letter is
                 # Increment the counter
@@ -174,5 +166,4 @@ def main():
                     if isCorrect(userGuess, questionAnswer):
                         print(correctMessage(userGuess, questionAnswer))
                         break
-                        
 main()
