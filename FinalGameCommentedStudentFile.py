@@ -1,3 +1,8 @@
+# John Crosbie
+# CIS122
+# Final Game
+# 3/23/18
+
 # Create a method that accepts a string as a message
 # and asks the user a question with that message (input).
 # Then return the user's response as the return value 
