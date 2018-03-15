@@ -120,7 +120,7 @@ def main():
         # the last letter or another letter in the middle when you
         # present the letters.
         if isCorrect(userGuess, questionAnswer):
-            print(correctMessage(userGuess, questionAnswer))
+            correctMessage(userGuess, questionAnswer)
             continue
         else:
             print("that was incorrect!")
@@ -144,7 +144,7 @@ def main():
                     index += 1
                     userGuess = tryAnswer("Try Again!\n")
                     if isCorrect(userGuess, questionAnswer):
-                        print(correctMessage(userGuess, questionAnswer))
+                        correctMessage(userGuess, questionAnswer)
                         break
                 # If this is the last letter, tell them so,
                 # and what the letter is
@@ -169,6 +169,6 @@ def main():
                     index += 1
                     userGuess = tryAnswer("Try Again!\n")
                     if isCorrect(userGuess, questionAnswer):
-                        print(correctMessage(userGuess, questionAnswer))
+                        correctMessage(userGuess, questionAnswer)
                         break
 main()
